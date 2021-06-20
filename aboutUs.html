@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+
+          <!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+             integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="style.css">
+            <script type="text/javascript" src="json_handle.js"></script>
+<script type="text/javascript" src="transfer.js"></script>
+            <style>
+           
+                 *
+ {
+box-sizing: border-box;
+}
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+
+</style>
+</head>
+
+
+
+<body>
+    <header>
+    <div class="Logo">
+       <img  src="./gallery/logo.png" height="120px" width="120px">
+     </div>
+       
+    </header>
+    
+    <div class="topnav"> <nav>
+        
+        <a  href="Webpage.html"><h2>Home</h2> </a> 
+         <a  class="active"  href="aboutUs.html"><h2>aboutUs</h2></a> 
+              <a  href="contactus.html"><h2>Contact</h2></a> 
+             <a   href="gallery.html"><h2>Gallery</h2></a>
+              <a   href="form1.html"><h2>SignUp</h2></a> 
+              <a   href="./cart.html">
+                <img src="gallery/cart.jpg" alt="cart" width="15%" height="15%">
+                </a> 
+  
+
+             
+             </nav>
+      </div>
+      <div class="about-section">
+        <h1>About Us Page</h1>
+        <p>At Emtec, community involvement is a key part of our culture..</p>
+        <p>We take seriously our responsibility to the communities in which
+           we live and work, and our Associates regularly give their time and resources to support local and national charities.
+            Aside from being the lifeblood of Emtec, our Associates are also at the forefront of the civic, charitable, and
+             philanthropic organizations in which they serve.
+          Emtec provides its Associates with many opportunities to become involved with current efforts and also regularly
+           initiates new projects to give back to the community..</p>
+      </div>
+      
+      <h2 style="text-align:center">Our Team</h2>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="./gallery/PlaceholderM.jpg" alt="image" style="width:100%" height="300">
+            <div class="container">
+              <h2>Dinesh Desai</h2>
+              <p class="title">Executive Chairman of the Board, Founder</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>xyz@example.com</p>
+              
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="./gallery/PlaceholderM.jpg" alt="image" style="width:100%" height="300 ">
+            <div class="container">
+              <h2>Sunil Misra</h2>
+              <p class="title">Chief Executive Officer and Presidenr</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>xyz@example.com</p>
+             
+            </div>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <img src="./gallery/PlaceholderM.jpg" alt="image" style="width:100%" height="300">
+            <div class="container">
+              <h2>Sachin Ghaisas</h2>
+              <p class="title">Managing Partner </p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>xyz@example.com</p>
+              
+            </div>
+          </div>
+        </div>
+
+        <!--products -->
+        <h2 style="text-align:center">Our Products</h2>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <a target="_blank"  onclick="collecting('1')">
+            <img src="./gallery/product1.jpg" alt="image" style="width:100%" height="250px">
+          </a>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <a target="_blank" onclick="collecting('2')">
+            <img src="./gallery/product2.jpg" alt="image" style="width:100%" height="250px">
+          </a>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <a target="_blank"  onclick="collecting('3')">
+            <img src="./gallery/product3.jpg" alt="image" style="width:100%" height="250px">
+          </a>
+          </div>
+        </div>
+        
+      </div>
+      <footer>
+        <p> <a href="Webpage.html">Home</a>|
+          <a href="aboutUs.html">aboutUs</a>|
+          <a href="#gallery.html">gallery</a>|
+          <a href="contactus.html">Contact</a></p>
+          <p>Privacy Policy last updated on July 23, 2020
+            Copyright © 2021 Emtec, Inc. All rights reserved.</p>
+      </footer>
+      
+      </body>
+</html>
+     

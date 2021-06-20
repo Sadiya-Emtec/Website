@@ -1,0 +1,26 @@
+{"products":[    
+    {
+	    "id":"1",
+	    "name":"Saregama Carvaan Earphones GX01 with Mic ", 
+	    "image":"./gallery/product1.jpg",
+	    "description":"Saregama Carvaan Earphones GX01 with Mic - Designed for Augmented Music Listening Experience, invoke Digital Assistance (Classic Black)", 
+	    "price": 1800
+	},   
+    {
+	    "id":"2",
+	    "name":"HP Pavilion Gaming Laptop",
+	    "image":"./gallery/product2.jpg",
+	    "description":"HP Pavilion Gaming 10th Gen Intel Core i5 Processor 15.6-inch FHD Gaming Laptop (8GB/512GB SSD + 32GB Intel Optane/144 Hz/Win10/MS Office/NVIDIA GTX 1650 4GB/Shadow Black), 15-dk1148TX",
+	    "price": 60000
+	},   
+    {
+	    "id":"3",
+		"name":"Acer  Wired Gaming Headset", 
+		"image":"./gallery/product3.jpg", 
+		"description":"Acer Predator Galea 311 Wired Gaming Headset (50mm Drivers/Rotatable Omni-Directional Mic with On-Cable Controls/Acer True Harmony Sound/Black)",
+		"price": 3772
+	} 
+]}  
+
+
+

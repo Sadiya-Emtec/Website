@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+   <!--  LOGIN LINKS -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- LOGIN LINKS END -->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&display=swap" rel="stylesheet">
+<script type="text/javascript" src="json_handle.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="product.json"></script>
+<script type="text/javascript" src="transfer.js"></script>
+<!-- /////// -->
+<script>
+function addtocart()
+{
+    console.log("ADD TO CART");
+    var quant=document.getElementById("quantity").value;
+    var pid=document.getElementById("pid").textContent;
+    /////
+    //access json
+    var flag=false;
+    var len=0;
+    var i=1;
+               
+				var xhttp=new XMLHttpRequest();
+				xhttp.onreadystatechange=function(){
+					if(xhttp.readyState==4 && xhttp.status==200)
+					{
+						var javaobj=JSON.parse(xhttp.response);
+						len=javaobj.products.length;
+                        for(i=1;i<=len;i++)
+                        {
+                            
+                                if(pid==i)
+                                {
+                                    localStorage.setItem(i,quant);
+                                }
+
+                        }
+                        
+						
+                    }
+				};
+                
+				xhttp.open("GET","product.json",true);
+				xhttp.send();
+    /////
+    console.log(localStorage);
+}
+
+</script>
+<script>
+  function opencart()
+  {
+  location.href= Website/cart.html
+  }
+</script>
+<!-- ///// -->
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@1,300&display=swap');
+	h3{
+	font-size: 25px;
+	font-family: 'Mate SC', serif;
+	color: black;
+}
+p{
+	font-size: 18px;
+	font-family: 'Zilla Slab', serif;
+	color: black;
+	
+}
+.navlink{
+	font-family: 'Mate SC', serif;
+}
+
+.gallery-container {
+    padding-left: 47px;
+    padding-right: 27px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+</style>
+<link rel="stylesheet" href="style.css">
+    <title>Emtec Assignment</title>
+  
+ 
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="Logo">
+         <img  src="gallery/logo.png" height="120px" width="120px">
+       </div>
+         
+      </header>
+      
+      <div class="topnav"> <nav>
+          
+          <a  href="D:\vscode\Website\Webpage.html"><h2>Home</h2> </a> 
+           <a  class="active"  href="D:\vscode\Website\aboutUs.html"><h2>aboutUs</h2></a> 
+                <a  href="D:\vscode\Website\contactus.html"><h2>Contact</h2></a> 
+               <a   href="D:\vscode\Website\gallery.html"><h2>Gallery</h2></a>
+                <a   href="D:\vscode\Website\form1.html"><h2>SignUp</h2></a> 
+                <a   href="./cart.html">
+                <img src="gallery/cart.jpg" alt="cart" width="15%" height="15%">
+                </a> 
+  
+               
+               </nav>
+        </div>
+
+  <div class="container-sm" id="home" style="text-align: center; padding-top: 100px;">
+  <div class="container-my">
+
+        <h3 id="item-name">INVALID</h3><br><br>
+        <div class="row justify-content-center">  
+       <div class="product-gallery" >                                 
+        <img src="" name="item-image" id="item-image"><br><br>
+         </div>
+          </div>
+         <h3> Description</h3>
+         <label id="pid"></label>
+        <p id="item-description">Invalid</p>
+         <h3 id="item-price" style="color: green">Invalid</h3>
+         <div class="counter">    
+          <span class="down"  onClick='decreaseCount(event, this)'>-</span>
+          <input type="text" value="1" id="quantity">
+          <span class="up" onClick='increaseCount(event, this)'>+</span>
+        </div>
+        <a target="_blank" onclick="addtocart()" >
+        <input type="button" class="btn-buy" value="Buy Now" onclick="addtocart()" > <br><br>
+        </a><input type="button" class="btn-addcart" value="Add to Cart" onclick="addtocart()" onsubmit="addtocart()"><br><br>
+
+          				  
+		            
+  </div>
+</div>
+<footer>
+  <p> <a href="#Home">Home</a>|
+    <a href="#aboutUs">aboutUs</a>|
+    <a href="#Gallery">gallery</a>|
+    <a href="#contact">Contact</a></p>
+    <p>Privacy Policy last updated on July 23, 2020
+      Copyright © 2021 Emtec, Inc. All rights reserved.</p>
+</footer>
+
+
+  
+  </body>
+</html>

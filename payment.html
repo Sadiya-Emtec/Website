@@ -1,0 +1,49 @@
+<button id="rzp-button1">Pay</button>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+var n=localStorage.getItem("name");
+var l=localStorage.getItem("lname");
+var price=parseInt(localStorage.getItem("total")) * 100 ;//
+console.log(price);
+var e=localStorage.getItem("email");
+var p=localStorage.getItem("phone");
+var options = {
+    "key": "rzp_test_LsrFTM5WyFlbR8", // Enter the Key ID generated from the Dashboard
+    "amount": price, // Amount is in currency subunits. Default currency is INR. Hence
+    "currency": "INR",
+    "name": "Emtec technologies",//
+    "description": "Test Transaction",
+    "image": "gallery/logo.png",
+  
+    "handler": function (response){
+        alert(response.razorpay_payment_id);
+        alert(response.razorpay_order_id);
+        alert(response.razorpay_signature)
+    },
+    "prefill": {
+        "name":n + " " + l , 
+        "email":e ,
+        "contact":p  
+    },
+    "notes": {
+        "address": "Razorpay Corporate Office"
+    },
+    "theme": {
+        "color": "#3399cc"
+    }
+};
+var rzp1 = new Razorpay(options);
+rzp1.on('payment.failed', function (response){
+        alert(response.error.code);
+        alert(response.error.description);
+        alert(response.error.source);
+        alert(response.error.step);
+        alert(response.error.reason);
+        alert(response.error.metadata.order_id);
+        alert(response.error.metadata.payment_id);
+});
+document.getElementById('rzp-button1').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+}
+</script>

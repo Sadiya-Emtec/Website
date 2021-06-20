@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="signup.js"></script>
+
+<style>
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    align-items: center;
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+
+/* Set a style for the submit button */
+input[type=submit] {
+  
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+  margin-right: 30;
+}
+.submit
+{
+  margin-right: 80;
+}
+
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+
+</style> 
+
+
+<script type="text/javascript" src="signup.js"></script>
+</head>
+  
+<body>
+    <header>
+        <div class="Logo">
+           <img  src="gallery/logo.png" height="120px" width="120px">
+         </div>
+           
+        </header>
+        <div class="topnav"> <nav>
+            
+          <a  href="Webpage.html"><h1>Home</h1> </a> 
+           <a   href="aboutUs.html"><h1>aboutUs</h1></a> 
+                <a   href="contactus.html"><h1>Contact</h2></a> 
+               <a   href="gallery.html"><h1>Gallery</h2></a>
+                <a class="active"  href="form1.html"><h1>SignUp</h2></a> 
+
+               
+               </nav>
+        </div>
+ 
+    <div class="container">
+       
+    <form name="formvalidate" action="" onsubmit="validateForm(this)" method="post" required>
+      
+        Title <input type="radio" name="title">
+        <label for="Mr.">Mr.</label>
+        <input type="radio" name="title">
+        <label for="Ms.">Ms.</label>
+        <input type="radio" name="title">
+        <label for="Mrs.">Mrs.</label> <br> <br>
+        <label>name</label>
+        <input align="center" type="text" id="inpName" placeholder="Enter your first name" pattern="^[a-zA-Z]{2,10}$" required="required" >
+        <input  align="center" type="text" placeholder="Enter your Middle name" pattern="^[a-zA-Z]{2,10}$">
+        <input  align="center" type="text" id="inpLname" placeholder="Enter your Last name" pattern="^[a-zA-Z]{2,10}$">
+         <br> <br>
+         <span  ><label for="password">Password: </label>
+            <input  align="center" placeholder="Enter your password" type="Password" name="Password" 
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,20}$" required="required">   
+          </span> <br> <br>
+             <span  ><label for="email">Email-id: </label>
+                <input  align="center" placeholder="Enter your Email-id" type="text" name="Email-id" id="inpEmail" autocomplete="off"
+                pattern="^[a-z0-9+_.-]+@[a-z0-9.-]+$" required="required" > 
+                </span> <br> <br>
+        <span  ><label for="Fname">Date: </label>
+             <input  align="center" placeholder="01-12-2021" type="text" name="Date" pattern="^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$">   
+            </span> <br> <br>
+        <span  ><label for="Fname">Contact: </label>
+             <input  align="center" placeholder="Enter your 10 digit number" type="text" name="Contactnumber" id="inpPhone"
+             pattern="^\d{10}$"
+             required="required">
+             </span> <br> <br>
+                 
+    <div>
+        Proffesional Fields <br><br> <input  align="middle" placeholder="Enter from below list" list="Fields", name="Fields">
+        <datalist id="Fields">
+            <option value="Engineering"></option>
+            <option value="Finance"></option>
+            <option value="Architecture"></option>
+        </datalist> <br><br>
+      </div>
+     
+      <button type="button" value="Submit" id="btnInsert" onclick="getDetails()" >SUBMIT</button>
+      
+</div>   
+
+
+    
+<div class="container signin">
+    <p>Already have an account? <a href="D:\vscode\website\Signin.html">log In</a>.</p>
+  </div>
+</form>
+
+ <!--- <script type="text/javascript">
+    function validateForm(valid){
+      var regex = /^(([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5}){1,25})+([;.](([a-zA-Z0-9_\-\.]+)@{[a-zA-Z0-9_\-\.]+0\.([a-zA-Z]{2,5}){1,25})+)*$/;
+          var passwordReg =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+
+      if(regex.test(valid.email.value)){
+       
+        alert("Congrats! This is a valid Email email");
+      }
+      else{
+        alert("This is not a valid email address");
+        
+      }
+
+      if(passwordReg.test(valid.password.value)){
+       
+        alert("Congrats! This is a valid Password");
+      }
+      else{
+        alert("Password should contain 1 alphabet, 1 special character");
+       
+      }
+
+    }
+  </script>-->
+  <footer>
+    <p> <a href="#Home">Home</a>|
+      <a href="#aboutUs">aboutUs</a>|
+      <a href="#Gallery">gallery</a>|
+      <a href="#contact">Contact</a></p>
+      <p>Privacy Policy last updated on July 23, 2020
+        Copyright © 2021 Emtec, Inc. All rights reserved.</p>
+  </footer>
+
+    </form>
+
+</html>
